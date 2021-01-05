@@ -31,8 +31,8 @@ public class ScoreManager : MonoBehaviour
     //必須添加剛體 rigidbody
     private void OnTriggerEnter(Collider other)
     {
-        //如果 碰撞物件的標籤 為 籃球 就加分
-        if (other.tag == "籃球")
+        //如果 碰撞物件的標籤 為 籃球 就加分 並且 籃球 的 高度 > 4
+        if (other.tag == "籃球" && other.transform.position.y > 4f)
         {
             AddScore();
         }
